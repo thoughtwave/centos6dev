@@ -8,4 +8,4 @@ systemctl enable cassandra
 systemctl start cassandra
 apt -y install python-pip
 pip install cassandra-driver
-
+pip install boto3
