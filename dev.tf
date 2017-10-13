@@ -65,7 +65,7 @@ resource "cloudflare_record" "client1" {
 
 resource "openstack_compute_instance_v2" "client1" {
   name = "client1"
-  image_id   = "e9019c07-d807-429a-8e1d-39bef59e0278"
+  image_id   = "56fe5bc1-6319-4dc3-b361-c0e5e4387c01"
   flavor_name   = "c1.large"
   key_pair        = "jonathan_client1"
   security_groups = ["default","centos_admins_sg"]
