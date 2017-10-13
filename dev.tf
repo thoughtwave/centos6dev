@@ -51,6 +51,16 @@ resource "openstack_networking_secgroup_rule_v2" "centos_admins_sg_rule_6" {
   security_group_id = "${openstack_networking_secgroup_v2.centos_admins_sg.id}"
 }
 
+resource "openstack_networking_secgroup_rule_v2" "centos_admins_sg_rule_7" {
+  direction         = "ingress"
+  ethertype         = "IPv4"
+  protocol          = "tcp"
+  port_range_min    = 5901
+  port_range_max    = 5901
+  remote_ip_prefix  = "0.0.0.0/0"
+  security_group_id = "${openstack_networking_secgroup_v2.centos_admins_sg.id}"
+}
+
 resource "openstack_networking_floatingip_v2" "client1_ip" {
   pool = "admin_floating_net"
 }
