@@ -2,4 +2,5 @@
 yum -y install epel-release
 yum -y install screen openvpn git
 yum -y groupinstall "GNOME Desktop"
+useradd -u 100 -g 100 -m jonathan
 yum -y update
