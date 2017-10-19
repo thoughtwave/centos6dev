@@ -1,0 +1,5 @@
+#!/bin/sh
+yum -y install epel-release
+yum -y install screen openvpn git
+yum -y groupinstall "GNOME Desktop"
+yum -y update
